@@ -86,6 +86,11 @@
         document.getElementById(`q${current}`).classList.add('active');
         document.getElementById('prevBtn').disabled = false;
         document.getElementById('nextBtn').disabled = !userAnswers[current];
+        
+        document.getElementById(`q${current}`).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       } else {
         showResult();
       }
@@ -97,6 +102,11 @@
         current--;
         document.getElementById(`q${current}`).classList.add('active');
         document.getElementById('nextBtn').disabled = !userAnswers[current];
+        
+        document.getElementById(`q${current}`).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       }
       if (current === 0) {
         document.getElementById('prevBtn').disabled = true;
@@ -108,7 +118,8 @@
       document.querySelectorAll('.question-container').forEach(q => {
         q.classList.add('active');
       });
-     
+
+
       document.querySelectorAll('input[type=radio]').forEach(input => {
         input.disabled = true;
       });
