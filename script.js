@@ -140,7 +140,7 @@
       document.querySelector('.buttons').style.display = 'none';
 
       let correctCount = userAnswers.filter((ans, i) => ans === questions[i].correct).length;
-      resultDiv.innerHTML = `<h3>Тест завершён!</h3><p>Правильных ответов: ${correctCount} из ${questions.length}</p>`;
+      resultDiv.innerHTML = `<h3>Тест аяқталды!</h3><p>Дұрыс жауаптар: ${correctCount} из ${questions.length}</p>`;
       resultDiv.style.display = 'block';
     }
 
